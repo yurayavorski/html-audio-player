@@ -1,0 +1,6 @@
+<h3>{{Title}}</h3>
+<ul id="playlist">
+  <li *ngFor="let music of Musics" (click)="service.ChangeSong(Musics.indexOf(music))" [ngClass]="{'current': music.isPlaying}">
+    {{music.Name}}
+  </li>
+</ul>

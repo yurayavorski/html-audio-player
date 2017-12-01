@@ -1,0 +1,13 @@
+h3 {
+    text-align: center ;
+}
+#playlist {
+    list-style: none;
+}
+#playlist li {
+    cursor: pointer;
+    padding: 10px;
+}
+.current {
+    background-color: #ccc;
+}

@@ -1,0 +1,16 @@
+<div id="controlls">
+  <button id="prev" class="controll" (click)="PrevSong();"></button>
+  <button id="play" class="controll mainControll" (click)="Play();"></button>
+  <button id="pause" class="controll mainControll" (click)="Pause();"></button>
+  <button id="next" class="controll mainControll" (click)="NextSong();"></button>
+  <div style="width: 300px;" id="volume-wrapper">
+    <span>volume</span>
+    <input class="mdl-slider mdl-js-slider" type="range"
+           min="0" max="100" value="100" tabindex="0" id="vol" (mousemove)="ChangeVolume(volume.value)" #volume>
+  </div>
+  <div style="width: 600px;" id="time-controll-wrapper">
+    <span>Time Controller</span>
+    <input class="mdl-slider mdl-js-slider" type="range"
+           min="0" max="{{Durations()}}" [value]="GetCurrentTime()" tabindex="0" id="time-controll" #timecontroll (mouseup)="ChangeTime(timecontroll.value)" (mousedown)="OnLocked()">
+  </div>
+</div>
